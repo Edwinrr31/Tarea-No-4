@@ -1,0 +1,50 @@
+﻿@model Tarea_4.Models.Persona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3> Datos Personales</h3>
+    @using (Html.BeginForm("Persona", "Persona", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.LabelFor(c => c.cedula)<br />
+        @Html.TextBoxFor(a => a.cedula, "")<br />
+        @Html.ValidationMessageFor(a => a.cedula, "", new { @class = "text-danger" })<br />
+        @Html.LabelFor(z => z.nombre)<br />
+        @Html.TextBoxFor(a => a.nombre, "")<br />
+        @Html.ValidationMessageFor(a => a.nombre, "", new { @class = "text-danger" })<br />
+        @Html.LabelFor(z => z.apellido)<br />
+        @Html.TextBoxFor(a => a.apellido, "")<br />
+        @Html.ValidationMessageFor(a => a.apellido, "", new { @class = "text-danger" })<br />
+        @Html.LabelFor(z => z.edad)<br />
+        @Html.TextBoxFor(a => a.edad, "")<br />
+        @Html.ValidationMessageFor(a => a.edad, "", new { @class = "text-danger" })<br />
+        @Html.LabelFor(z => z.telefono)<br />
+        @Html.TextBoxFor(a => a.telefono, "")<br />
+        @Html.LabelFor(z => z.correo)<br />
+        @Html.TextBoxFor(a => a.correo, "")<br />
+        @Html.ValidationMessageFor(a => a.correo, "", new { @class = "text-danger" })<br />
+        @Html.CheckBoxFor(a => a.masculino)<br />
+        @Html.LabelFor(z => z.masculino)<br />
+        @Html.CheckBoxFor(a => a.femenino)<br />
+        @Html.LabelFor(z => z.femenino)<br />
+        @Html.LabelFor(c => c.cargo)<br />
+        @Html.TextBoxFor(a => a.cargo, "")<br />
+        @Html.ValidationMessageFor(a => a.cargo, "", new { @class = "text-danger" })<br />
+        <input type="file" name="imagen" /> <br /><br />
+        <input type="file" name="PDF" /> <br /><br />
+        <input type="submit" value="ENVIAR" /><br /> <br />
+        <a href="@Url.Action("Index", "Home")">Menu Principal</a>
+    }
+
+
+</body>
+</html>

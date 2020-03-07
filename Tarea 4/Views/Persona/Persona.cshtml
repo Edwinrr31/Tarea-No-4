@@ -1,0 +1,32 @@
+﻿@model Tarea_4.Models.Persona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persona</title>
+</head>
+<body>
+    <div>
+        <label> Mi cedula es: @Model.cedula <br /> </label>
+        <label> Mi nombre es: @Model.nombre <br /> </label>
+        <label> Mi apellido es: @Model.apellido <br /> </label>
+        <label> Mi edad es: @Model.edad <br /> </label>
+        <label> Mi telefono es: @Model.telefono <br /> </label>
+        <label> Mi correo es: @Model.correo <br /> </label>
+        <label> Mi genero es: @Model.masculino <br /> </label>
+        <label> El cargo a elegir es: @Model.cargo </label> <br />
+        <object data="archivo.pdf"></object>
+        <iframe src="archivo.pdf"></iframe>
+        <img src="~/Fotos/@ViewBag.foto" width="300" height="300" />
+
+
+
+    </div>
+</body>
+</html>
