@@ -75,7 +75,32 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title text-center">Masa</h4>
+                </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm("Index", "Conversor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div>
+                            @Html.TextBoxFor(a => a.masa, new { @class = "form-control" })
+                        </div>
+                        <div>
+                            @Html.DropDownListFor(a => a.primeraUnidad, new SelectList(Enum.GetValues(typeof(TipoMasa))), new { @class = "form-control" })
+                            <p class="text-center">a</p>
+                            @Html.DropDownListFor(a => a.segundaUnidad, new SelectList(Enum.GetValues(typeof(TipoMasa))), new { @class = "form-control" })
+                        </div>
+                        <div>
+                            <label class="form-control text-center">@ViewBag.resulMasa</label>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Convertir" class="btn btn-primary" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

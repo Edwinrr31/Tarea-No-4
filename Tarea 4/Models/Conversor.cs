@@ -16,6 +16,9 @@ namespace Tarea_4.Models
         public double temperatura { get; set; }
         public double resultadoTemperatura { get; set; }
 
+        public double masa { get; set; }
+        public double resultadoMasa { get; set; }
+
 
     }
 
@@ -26,5 +29,9 @@ namespace Tarea_4.Models
     public enum TipoTemperaturas
     {
         Celcius, Farenheit, Kelvin
+    }
+    public enum TipoMasa
+    {
+        Gramos, Kilogramos, Onzas, Libras
     }
 }

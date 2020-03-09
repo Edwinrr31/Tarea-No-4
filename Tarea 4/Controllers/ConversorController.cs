@@ -268,6 +268,101 @@ namespace Tarea_4.Controllers
 
             /*--------------------------------------------------------------------------------*/
 
+            /*------------------------------- Conversor de Masa --------------------------------*/
+
+            try
+            {
+                //Gramos a Kilogramos
+                if (conver.primeraUnidad.Equals("Gramos") && conver.segundaUnidad.Equals("Kilogramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 1000.0, 9);
+                }
+                //Kilogramos a Gramos
+                else if (conver.primeraUnidad.Equals("Kilogramos") && conver.segundaUnidad.Equals("Gramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 0.0010000, 9);
+                }
+                //Gramos a Onzas
+                else if (conver.primeraUnidad.Equals("Gramos") && conver.segundaUnidad.Equals("Onzas"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 0.035274, 9);
+                }
+                //Onzas a Gramos
+                else if (conver.primeraUnidad.Equals("Onzas") && conver.segundaUnidad.Equals("Gramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 0.035274, 9);
+                }
+                //Gramos a Libras
+                else if (conver.primeraUnidad.Equals("Gramos") && conver.segundaUnidad.Equals("Libras"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 0.0022046, 9);
+                }
+                //Libras a Gramos
+                else if (conver.primeraUnidad.Equals("Libras") && conver.segundaUnidad.Equals("Gramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 0.0022046, 9);
+                }
+                //Kilogramos a Onzas
+                else if (conver.primeraUnidad.Equals("Kilogramos") && conver.segundaUnidad.Equals("Onzas"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 35.274, 9);
+                }
+                //Onzas a Kilogramos
+                else if (conver.primeraUnidad.Equals("Onzas") && conver.segundaUnidad.Equals("Kilogramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 35.274, 9);
+                }
+                //Kilogramos a libras
+                else if (conver.primeraUnidad.Equals("Kilogramos") && conver.segundaUnidad.Equals("Libras"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 2.2046, 9);
+                }
+                //Libras a Kilogramos
+                else if (conver.primeraUnidad.Equals("Libras") && conver.segundaUnidad.Equals("Kilogramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa / 2.2046, 9);
+                }
+                //Onzas a Libras
+                else if (conver.primeraUnidad.Equals("Onzas") && conver.segundaUnidad.Equals("Libras"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 0.062500, 9);
+                }
+                //Libras a Onzas
+                else if (conver.primeraUnidad.Equals("Libras") && conver.segundaUnidad.Equals("Onzas"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa * 16.000, 9);
+                }
+                //Gramos a Gramos
+                else if (conver.primeraUnidad.Equals("Gramos") && conver.segundaUnidad.Equals("Gramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa, 9);
+                }
+                //Kilogramos a Kilogramos
+                else if (conver.primeraUnidad.Equals("Kilogramos") && conver.segundaUnidad.Equals("Kilogramos"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa, 9);
+                }
+                //Onzas a Onzas
+                else if (conver.primeraUnidad.Equals("Onzas") && conver.segundaUnidad.Equals("Onzas"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa, 9);
+                }
+                //Libras a Libras
+                else if (conver.primeraUnidad.Equals("Libras") && conver.segundaUnidad.Equals("Libras"))
+                {
+                    conver.resultadoMasa = Math.Round(conver.masa, 9);
+                }
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            ViewBag.resulMasa = conver.resultadoMasa;
+
+            /*--------------------------------------------------------------------------------*/
+
 
             return View();
         }
