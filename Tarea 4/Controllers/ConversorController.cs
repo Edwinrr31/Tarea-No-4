@@ -363,6 +363,201 @@ namespace Tarea_4.Controllers
 
             /*--------------------------------------------------------------------------------*/
 
+            /*------------------------------- Conversor de Masa --------------------------------*/
+
+            try
+            {
+                //Bit a Byte
+                if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 8, 9);
+                }
+                //Byte a Bit
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 8, 9);
+                }
+                //Bit a Kilobyte
+                else if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 8000, 9);
+                }
+                //Kilobyte a bit
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 8000, 9);
+                }
+                //Bit a MegaByte
+                else if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 8e+6, 9);
+                }
+                //MegaByte a Bit
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 8e+6, 9);
+                }
+                //Bit a Gigabyte
+                else if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 8e+9, 9);
+                }
+                //Gigabyte a Bit
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 8e+9, 9);
+                }
+                //Bit a Terabyte
+                else if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 8e+12, 9);
+                }
+                //Terabyte a bit
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 8e+12, 9);
+                }
+                //Byte a Kilobyte
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1000, 9);
+                }
+                //Kilobyte a Byte
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1000, 9);
+                }
+                //Byte a Megabyte
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+6, 9);
+                }
+                //Megabyte a Byte
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+6, 9);
+                }
+                //Byte a Gigabyte
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+9, 9);
+                }
+                //Gigabyte a Byte
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+9, 9);
+                }
+                //Byte a Terabyte
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+12, 9);
+                }
+                //Terabyte a Byte
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+12, 9);
+                }
+                //Kilobyte a Megabyte
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1000, 9);
+                }
+                //Megabyte a Kilobyte
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1000, 9);
+                }
+                //Kilobyte a Gigabyte
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+6, 9);
+                }
+                //Gigabyte a Kilobyte
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+6, 9);
+                }
+                //Kilobyte a Terabyte
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+9, 9);
+                }
+                //Terabyte a Kilobyte
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+9, 9);
+                }
+                //Megabyte a Gigabyte
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1000, 9);
+                }
+                //Gigabyte a Megabyte
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1000, 9);
+                }
+                //Megabyte a Terabyte
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1e+6, 9);
+                }
+                //Terabyte a Megabyte
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1e+6, 9);
+                }
+                //Gigabyte a Terabyte
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato / 1000, 9);
+                }
+                //Terabyte a Gigabyte
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato * 1000, 9);
+                }
+                //Bit a Bit
+                else if (conver.primeraUnidad.Equals("Bit") && conver.segundaUnidad.Equals("Bit"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+                //Byte a Byte
+                else if (conver.primeraUnidad.Equals("Byte") && conver.segundaUnidad.Equals("Byte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+                //Kilobyte a Kilobyte
+                else if (conver.primeraUnidad.Equals("Kilobyte") && conver.segundaUnidad.Equals("Kilobyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+                //Megabyte a Megabyte
+                else if (conver.primeraUnidad.Equals("Megabyte") && conver.segundaUnidad.Equals("Megabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+                //Gigabyte a Gigabyte
+                else if (conver.primeraUnidad.Equals("Gigabyte") && conver.segundaUnidad.Equals("Gigabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+                //Terabyte a Terabyte
+                else if (conver.primeraUnidad.Equals("Terabyte") && conver.segundaUnidad.Equals("Terabyte"))
+                {
+                    conver.resultadoDato = Math.Round(conver.dato, 9);
+                }
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            ViewBag.resulDato = conver.resultadoDato;
+
+            /*--------------------------------------------------------------------------------*/
+
 
             return View();
         }

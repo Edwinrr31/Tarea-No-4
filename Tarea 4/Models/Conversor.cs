@@ -19,6 +19,9 @@ namespace Tarea_4.Models
         public double masa { get; set; }
         public double resultadoMasa { get; set; }
 
+        public double dato { get; set; }
+        public double resultadoDato { get; set; }
+
 
     }
 
@@ -33,5 +36,9 @@ namespace Tarea_4.Models
     public enum TipoMasa
     {
         Gramos, Kilogramos, Onzas, Libras
+    }
+    public enum TipoDatos
+    {
+        Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte
     }
 }
