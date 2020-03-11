@@ -32,14 +32,17 @@
         @Html.LabelFor(z => z.correo)<br />
         @Html.TextBoxFor(a => a.correo, "")<br />
         @Html.ValidationMessageFor(a => a.correo, "", new { @class = "text-danger" })<br />
-        @Html.CheckBoxFor(a => a.masculino)<br />
-        @Html.LabelFor(z => z.masculino)<br />
-        @Html.CheckBoxFor(a => a.femenino)<br />
-        @Html.LabelFor(z => z.femenino)<br />
+        @Html.ValidationMessageFor(a => a.genero, "Tu genero es", new { @class = "text-danger" })<br />
+        @Html.CheckBoxFor(a => a.genero, "")
+        @Html.ValidationMessageFor(a => a.genero, "Masculino", new { @class = "text-danger" })<br />
+        @Html.CheckBoxFor(a => a.genero, "")
+        @Html.ValidationMessageFor(a => a.genero, "Femenino", new { @class = "text-danger" })<br />
         @Html.LabelFor(c => c.cargo)<br />
         @Html.TextBoxFor(a => a.cargo, "")<br />
         @Html.ValidationMessageFor(a => a.cargo, "", new { @class = "text-danger" })<br />
+        <p> Imagen</p> <br />
         <input type="file" name="imagen" /> <br /><br />
+        <p> Curriculum</p> <br />
         <input type="file" name="PDF" /> <br /><br />
         <input type="submit" value="ENVIAR" /><br /> <br />
         <a href="@Url.Action("Index", "Home")">Menu Principal</a>

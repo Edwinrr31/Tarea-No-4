@@ -21,11 +21,13 @@ namespace Tarea_4.Models
 
         public string correo { get; set; }
 
-        public bool masculino { get; set; }
-        public bool femenino { get; set; }
-
+        public bool genero { get; set; }
+        
         public string cargo { get; set; }
 
         public string Foto { get; set; }
+
+        public string PDF { get; set; }
+        
     }
 }

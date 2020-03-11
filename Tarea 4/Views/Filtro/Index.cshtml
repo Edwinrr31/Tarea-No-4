@@ -1,0 +1,65 @@
+﻿@model Tarea_4.Models.Filtro
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <html>
+    <head>
+        <style>
+
+            .dropdown-button {
+                background-color: #00b351;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-list {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+                
+                .dropdown-list a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    font-family: verdana;
+                }
+                    
+                    .dropdown-list a:hover {
+                        background-color: #ddd;
+                    }
+            
+            .dropdown:hover .dropdown-list {
+                display: block;
+            }
+            
+            .dropdown:hover .dropdown-button {
+                background-color: #6666ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dropdown">
+            <button class="dropdown-button">Filtro de Contenido</button>
+            <div class="dropdown-list">
+                <a href=@Url.Action("Noticias", "Filtro")>Noticias</a>
+                <a href=@Url.Action("Musica", "Filtro")>Musica</a>
+                <a href=@Url.Action("Peliculas", "Filtro")>Peliculas</a>
+            </div>
+            <a href="@Url.Action("Index", "Home")">Menu Principal</a>
+        </div>
+    </body>
+    </html>

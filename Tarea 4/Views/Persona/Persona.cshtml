@@ -19,10 +19,9 @@
         <label> Mi edad es: @Model.edad <br /> </label>
         <label> Mi telefono es: @Model.telefono <br /> </label>
         <label> Mi correo es: @Model.correo <br /> </label>
-        <label> Mi genero es: @Model.masculino <br /> </label>
+        <label> Mi genero es: @Model.genero <br /> </label>
         <label> El cargo a elegir es: @Model.cargo </label> <br />
-        <object data="archivo.pdf"></object>
-        <iframe src="archivo.pdf"></iframe>
+        <embed src="~/PDF/@ViewBag.PDF" type="application/pdf" width="300" height="600" />
         <img src="~/Fotos/@ViewBag.foto" width="300" height="300" />
 
 

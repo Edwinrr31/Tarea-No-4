@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Musica";
+}
+
+<h1> Reproductor De Musica </h1>
+<script>
+function cambiarTrack(track) {
+   var path =  track.getAttribute("path")
+   viejo_audio = document.getElementById("reproductor")
+   audio_padre = viejo_audio.parentNode
+   audio_padre.removeChild(viejo_audio)
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")
+  // nuevo_audio.setAttribute("autoplay", "autoplay")
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   audio_padre.appendChild(nuevo_audio)}
+function cargarReproductor() {
+         var select = document.getElementById("selectTrack")
+         var path = select.options[0].getAttribute("path")
+   nuevo_audio = document.createElement("audio")
+   nuevo_audio.setAttribute("id","reproductor")
+   nuevo_audio.setAttribute("controls", "controls")
+   source = document.createElement("source")
+   source.setAttribute("src", path)
+   source.setAttribute("type", "audio/mpeg")
+   source.setAttribute("id", "reproductorSource")
+   nuevo_audio.appendChild(source)
+   padre = document.getElementById("reproductorBox")
+   padre.appendChild(nuevo_audio)
+}
+</script>
+<div id="reproductorBox"></div>
+<select id="selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+    <option path="../music/Basura.mp3">Rata Blanca - Basura</option>
+    <option path="../music/Get.mp3">Daft Punk - Get Lucky</option>
+    <option path="../music/Wonderwall.mp3">Oasis - Wonderwall</option>
+</select>
+<script>cargarReproductor();</script>
+
+<a href="@Url.Action("Index", "Home")">Menu Principal</a>
+

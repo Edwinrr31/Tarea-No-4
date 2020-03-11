@@ -12,17 +12,7 @@ namespace Tarea_4.Controllers
         [HttpPost]
         public ActionResult Persona(Persona perso, HttpPostedFileBase imagen)
         {
-            Persona obj = new Persona();
 
-            obj.cedula = Convert.ToInt64(Request.Form["cedula"]);
-            obj.nombre = Request.Form["nombre"].ToString();
-            obj.apellido = Request.Form["apellido"].ToString();
-            obj.edad = Convert.ToInt32(Request.Form["edad"]);
-            obj.telefono = Convert.ToInt64(Request.Form["telefono"]);
-            obj.correo = Request.Form["correo"].ToString();
-            obj.masculino = Convert.ToBoolean(Request.Form["genero"]);
-            obj.femenino = Convert.ToBoolean(Request.Form["genero"]);
-            obj.cargo = Request.Form["cargo"].ToString();
 
             if (ModelState.IsValid)
             {
@@ -32,12 +22,19 @@ namespace Tarea_4.Controllers
                 ViewBag.foto = nombreFoto;
                 return View(perso);
             }
-            else
-            {
-                return View("Persona");
+            else _ = ModelState.IsValid;
+                    {
+                string Archivo = imagen.FileName;
+                imagen.SaveAs(Server.MapPath("/PDF/" + Archivo));
+
+                ViewBag.PDF = Archivo;
+                return View(perso);
             }
 
+            
         }
+
+
 
         public ActionResult Index()
         {
