@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center">Lista de Datos</h4>
+        </div>
+        <div class="panel-body">
+            <table class="table" cellpadding="2" cellspacing="2" border="1">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                </tr>
+                @foreach (var d in ViewBag.ListaDatos)
+                {
+                    <tr>
+                        <td>@d.Id</td>
+                        <td>@d.Nombre</td>
+                        <td>@d.Precio</td>
+                        <td>@d.Cantidad</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

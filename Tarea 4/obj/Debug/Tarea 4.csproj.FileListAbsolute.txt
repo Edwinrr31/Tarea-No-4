@@ -377,3 +377,4 @@ C:\Users\edwin\Downloads\Tarea-No-4\Tarea 4\obj\Debug\Tarea 4.csprojAssemblyRefe
 C:\Users\edwin\Downloads\Tarea-No-4\Tarea 4\obj\Debug\Tarea 4.csproj.CopyComplete
 C:\Users\edwin\Downloads\Tarea-No-4\Tarea 4\obj\Debug\Tarea 4.dll
 C:\Users\edwin\Downloads\Tarea-No-4\Tarea 4\obj\Debug\Tarea 4.pdb
+C:\Users\Antonio\Desktop\Proyectos\Tarea-No-4\Tarea 4\obj\Debug\Tarea 4.csproj.ResolveComReference.cache

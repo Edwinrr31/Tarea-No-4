@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        .panel {
+            margin-top: 35px;
+            width: 313px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title text-center">Lector de Archivos xls</h4>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("Import", "Excel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                <input type="file" name="excelfile" />
+                @Html.Raw(ViewBag.Error)
+                <br />
+
+                <div class="text-center">
+                    <input class="btn btn-primary" type="submit" value="Cargar" />
+                </div>
+            }
+        </div>
+    </div>
+
+
+</body>
+</html>
